@@ -1,0 +1,317 @@
+
+
+.main-nav {
+  background-color: var(--color-primary-50);
+ 
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  padding: 12px 0;
+}
+
+.nav-list {
+  color: var(--color-neutral-700);
+ 
+  background-color: var(--color-primary-50);
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 4px 12px;
+}
+
+.btn-menu {
+  display: none; 
+  border: 0;
+  padding: 12px;
+  background: transparent; 
+  color: inherit; 
+  font: inherit; 
+  cursor: pointer; 
+}
+
+.hero {
+  height: calc(
+    100vh - 64px
+  ); 
+  overflow: hidden; 
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 999px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.resume {
+  border: 1px solid var(--color-neutral-700);
+}
+
+
+
+.decorate-1 {
+  position: absolute;
+  top: 97px;
+  left: -81px;
+}
+
+.decorate-2 {
+  position: absolute;
+  bottom: 87px;
+  right: -80px;
+}
+
+.decorate-3 {
+  position: absolute;
+
+  &.flower-left-bottom {
+    width: 80px;
+    height: 80px;
+    bottom: 192px;
+    left: 391px;
+  }
+
+  &.flower-left-top {
+    top: 56px;
+    left: -226px;
+  }
+
+  &.flower-right-center {
+    top: 206px;
+    right: -170px;
+  }
+}
+
+.decorate-4 {
+  position: absolute;
+  top: 120px;
+  left: -87px;
+}
+
+.decorate-5 {
+  position: absolute;
+  left: 211px;
+  bottom: 83.53px;
+}
+
+.decorate-6 {
+  display: none;
+}
+
+
+
+.card-list .card {
+  min-width: 306px;
+}
+
+
+
+.project-card {
+  &:nth-of-type(1) {
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/project_1.png?raw=true");
+  }
+
+  &:nth-of-type(2) {
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/project_2.png?raw=true");
+  }
+
+  &:nth-of-type(3) {
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/project_3.png?raw=true");
+  }
+}
+
+.project-content {
+  max-width: 386px;
+}
+
+
+
+.subscriptions {
+  position: relative;
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/subscription_bg.png?raw=true);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-dark-60a);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+
+.contact-input-half {
+  --gap: 24px;
+  width: calc((100% - var(--gap)) / 2);
+}
+
+@media (max-width: 992px) {
+
+  .logo {
+    padding: 14px 0;
+  }
+
+
+  .btn-menu {
+    display: block;
+    border: 1px solid var(--color-neutral-700); 
+    border-radius: 50%; 
+  }
+
+
+  .nav-list {
+    opacity: 0; 
+    max-height: 0px; 
+    display: flex; 
+    flex-direction: column; 
+    overflow: hidden; 
+    width: 100%; 
+    text-align: center;
+
+
+    position: absolute;
+    top: 60px;
+    left: 0px;
+  }
+
+
+  .nav-list li:first-child {
+    padding-top: 12px;
+  }
+
+
+  .nav-list li:last-child {
+    padding-bottom: 12px;
+  }
+
+
+  .nav-list.active {
+    opacity: 1; 
+    max-height: 176px; 
+    transition:
+      opacity 0.3s ease-in,
+      max-height 0.3s ease-in; 
+  }
+
+
+  .gap-md-12 {
+    gap: 12px;
+  }
+
+
+  .label-mobile-sm {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+
+  .menu-open .mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  .hero {
+    height: calc(100vh - 68px);
+  }
+
+  .decorate-1 {
+    top: 26px;
+    left: -27px;
+    width: 80px;
+    height: 79px;
+  }
+
+  .decorate-2 {
+    top: 274px;
+    right: -25px;
+    width: 80px;
+    height: 69px;
+  }
+
+  .decorate-3 {
+    &.flower-left-bottom {
+      width: 80px;
+      height: 80px;
+      top: 414px;
+      left: 249px;
+    }
+
+    &.flower-left-top {
+      display: none;
+    }
+
+    &.flower-right-center {
+      display: none;
+    }
+  }
+
+  .decorate-4,
+  .decorate-5 {
+    display: none;
+  }
+
+
+  .decorate-6 {
+    position: absolute;
+    display: block;
+    top: 398.41px;
+    left: 134.5px;
+  }
+
+
+  .card-list .card {
+    min-width: 260px;
+  }
+
+
+  .project-card {
+    padding-top: 280px;
+
+    &:nth-of-type(1) {
+      background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/mobile/project_1.png?raw=true");
+    }
+
+    &:nth-of-type(2) {
+      background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/mobile/project_2.png?raw=true");
+    }
+
+    &:nth-of-type(3) {
+      background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/mobile/project_3.png?raw=true");
+    }
+  }
+
+  .project-content {
+    max-width: none;
+  }
+
+
+
+  .blog-card {
+    min-width: 260px;
+  }
+
+
+  .contact-input-half {
+    width: 100%;
+  }
+}
